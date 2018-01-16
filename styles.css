@@ -25,8 +25,7 @@ h1 {
 	font-family: 'League Spartan', 'Open Sans', sans-serif;
 	font-size: 138px;
 	font-weight: 600;
-	margin: 100px 0 20px;
-	white-space: nowrap;
+	margin: 100px 0;
     letter-spacing: -0.03em;
 }
 h2, h3, h4 {
@@ -73,11 +72,8 @@ a:hover, a:focus, a:active {
 
 /* header */
 header {
-	background: #b30a2e url(assets/header_background.png);
-	background-repeat: no-repeat;
-	background-position: top center;
+	background: #b30a2e;
 	text-align: center;
-	background-size: 150%;
 }
 .logoContainer {
 	background: #fff;
@@ -93,6 +89,7 @@ header .text-wrapper {
 	width: 63%;
 	text-align: left;
 	margin: 0 auto;
+	height: 100%;
 }
 header p {
 	color: white;
@@ -160,30 +157,6 @@ section .textWrapper {
 
 .event, main {
 	background: #EDF5F8;
-}
-
-.travel h3 {
-	padding-bottom: 30px;
-}
-.talk {
-	padding-bottom: 10px;
-}
-.talkDesc {
-	padding-bottom: 30px;
-}
-
-.google-maps {
-    position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
-}
-.google-maps iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
 }
 .travel,
 .partners {
