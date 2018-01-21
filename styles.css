@@ -72,12 +72,12 @@ a:hover, a:focus, a:active {
 
 /* header */
 header {
-	background-color: #b30a2e;
+/*	background-color: #b30a2e;
 	background: url(assets/IMG_1748_Joseph_HackerYou_monotone_v1.jpg) center;
 	background-position: cover;
 	background-attachment: fixed;
 	text-align: center;
-	background-size: contain;
+	background-size: contain;*/
 }
 .logoContainer {
 	background: #fff;
@@ -94,6 +94,7 @@ header .text-wrapper {
 	text-align: left;
 	margin: 0 auto;
 	height: 100%;
+	overflow: hidden;
 }
 header p {
 	color: white;
@@ -148,6 +149,29 @@ header a {
 .buyTickets a:hover, .buyTickets a:active, .buyTickets a:focus {
 	border: 0;
 	color: #fff;
+}
+
+/* home page hero */
+.home .text-wrapper {
+	background-color: #b30a2e;
+	background: url(assets/IMG_1748_Joseph_HackerYou_monotone_v1.jpg) center;
+	background-position: cover;
+	background-attachment: fixed;
+	text-align: center;
+	background-size: contain;
+    width: 100%;
+    padding: 100px 17.5%;
+}
+
+.heading-wrapper {
+	background: #b30a2e;
+    padding: 30px 50px;
+    display: inline-block;
+    transform: rotate(-5deg);
+}
+.heading-wrapper h1 {
+	transform: rotate(5deg);
+	margin: 0;
 }
 
 /* sections */
@@ -219,6 +243,7 @@ footer p {
     position: relative;
     left: 5%;
     display: inline-block;
+    max-width: 95%;
 }
 
 /* speakers page */
