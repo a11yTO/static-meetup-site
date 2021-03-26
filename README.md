@@ -1,4 +1,4 @@
-# #a11yTO Camp Site README
+# #a11yTO Meetup Site README
 
 We used [the simple and static benefits of Jekyll](https://jekyllrb.com/) to help manage our site. You'll need to have Jekyll installed on your computer to manipulate the site and see those changes locally. Installing Jekyll is relatively easy to do.
 
