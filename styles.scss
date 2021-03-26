@@ -1,0 +1,724 @@
+/* -------------------------------------------------------------------------
+ * #a11yTO Global Sass Variables 
+ * ------------------------------------------------------------------------- */
+$a11yto-brand-color: #000000;
+$meetup-brand-color: #b30a2e;
+$camp-brand-color: #076800;
+$conf-brand-color: #025b9f;
+$irl-brand-color: #6c2e7d;
+$gaming-brand-color: #d43d27;
+
+$brand-color: $meetup-brand-color;
+$main-font-color: #222222;
+$inverted-font-color: #ffffff;
+$background: #ffffff;
+$secondary-color: #025b9f;
+$secondary-background: #edf5f8;
+$error: #b30a2e;
+$attention: yellow;
+
+$base-font-size: 112.5%;
+
+$main-font-stack: "Open Sans", sans-serif;
+$heading-font-stack: "League Spartan", "Open Sans", sans-serif;
+$link-color: $secondary-color;
+$link-underline: 1px solid $brand-color;
+
+$main-nav-mid-breakpoint: 30em;
+$main-nav-wide-breakpoint: 50em;
+
+/* -------------------------------------------------------------------------
+ * Global reset
+ * ------------------------------------------------------------------------- */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix {
+  zoom: 1;
+} /* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+} /* IE7 */
+
+html,
+body {
+  margin: 0;
+}
+.hidden {
+  display: none;
+}
+/* End global reset */
+
+/* -------------------------------------------------------------------------
+ * Utility class to hide content visually while keeping it screen reader-accessible.
+ * Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html 
+ * ------------------------------------------------------------------------- */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* End sr-only class */
+
+/* -------------------------------------------------------------------------
+ * Typography structure & style
+ * ------------------------------------------------------------------------- */
+body {
+  background: $background;
+  color: $main-font-color;
+  font-family: $main-font-stack;
+  font-size: $base-font-size;
+  line-height: 1.55;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $brand-color;
+  font-family: $heading-font-stack;
+  font-size: $base-font-size * 1.5;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+  position: relative;
+}
+.page-title {
+  font-size: $base-font-size * 2;
+}
+.home .page-title {
+  font-size: $base-font-size * 1.75;
+}
+.event {
+  text-align: center;
+}
+.event-title {
+  color: $inverted-font-color;
+  font-size: 6.44em;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+.event-description {
+  margin: 0;
+}
+.event-detail,
+.event-description {
+  font-size: $base-font-size * 2;
+}
+.event-date {
+  font-weight: bold;
+}
+.page-title {
+  margin-bottom: 0.5em;
+}
+.sub-head {
+  font-size: $base-font-size * 1.15;
+  font-weight: 600;
+  margin: 1em 0 0;
+}
+@media screen and (min-width: 25em) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: $base-font-size * 2.25;
+  }
+  .page-title {
+    font-size: $base-font-size * 3.5;
+    letter-spacing: -0.04em;
+  }
+  .main .home .page-title {
+    font-size: $base-font-size * 2.25;
+  }
+}
+@media screen and (min-width: 35em) {
+  .main .home .page-title {
+    font-size: $base-font-size * 3.5;
+  }
+}
+@media screen and (min-width: 0) {
+  .event-title {
+    font-size: 11vw;
+    margin-bottom: 0.25em;
+  }
+  .event-description,
+  .event-detail {
+    font-size: $base-font-size;
+  }
+}
+@media screen and (min-width: 40em) {
+  .event-title {
+    font-size: 9.1vw;
+    margin-bottom: 0.15em;
+  }
+  .event-description,
+  .event-detail {
+    font-size: 3vw;
+  }
+}
+p,
+ul,
+ol {
+  margin: 1.5em 0;
+}
+/* End typography structure & styles */
+
+/* -------------------------------------------------------------------------
+ * Link styles
+ * ------------------------------------------------------------------------- */
+ a {
+  color: $link-color;
+  &:active {
+    color: $secondary-color;
+  }
+}
+*:focus,
+a:focus {
+  outline: 2px solid black;
+  text-decoration: none;
+}
+.main-nav-menu {
+  a {
+    color: $main-font-color;
+    padding: 0.33em;
+    text-decoration: none;
+  }
+  a.current-page {
+    text-decoration: underline;
+  }
+  .tickets a {
+    background: $brand-color;
+    border-radius: 1.38em;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 0.44em 0.83em;
+    white-space: nowrap;
+  }
+}
+a.current-page {
+  color: $secondary-color;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.social-icons {
+  a {
+    padding: 0.75em 0.25em 0;
+  }
+}
+@supports (text-underline-offset: 0) {
+  a {
+    text-decoration-line: underline;
+    text-decoration-color: $brand-color;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+  .main-nav-menu a,
+  .tickets a,
+  .branded-events a {
+    text-decoration-line: none;
+  }
+  .main-nav-menu a.current-page {
+    text-decoration-color: $brand-color; 
+  }
+  footer a.current-page {
+    text-decoration-line: none;
+  }
+  .staged a {
+    color: $inverted-font-color;
+    text-decoration-color: $inverted-font-color;
+  }
+}
+/* End link styles */
+
+/* -------------------------------------------------------------------------
+ * Page structure & styles
+ * ------------------------------------------------------------------------- */
+ .site-header {
+  background: $background;
+  border-bottom: 3px solid $brand-color;
+  padding: 1.25em 5%;
+  text-align: center;
+}
+.branding {
+  font-size: $base-font-size;
+}
+.branding-logo {
+  color: $brand-color;
+  fill: $brand-color;
+  height: auto;
+  width: 14.25em;
+}
+.main-nav-menu {
+  margin: 0.25em 0 0;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      margin: 0 0.25em 1em;
+    }
+    .tickets {
+      margin: 1.5em 0 1.75em;
+    }
+    .social {
+      margin: 0;
+    }
+  }
+}
+.social-icons {
+  margin: 0.25em 0 0;
+  padding: 0;
+  li {
+    display: inline;
+    margin-bottom: 0;
+  }
+  .twitter-icon,
+  .facebook-icon,
+  .youtube-icon,
+  .instagram-icon,
+  .linkedin-icon {
+    background: $background;
+    fill: $brand-color;
+    height: auto;
+    width: 1.55em;
+  }
+}
+@supports (flex-wrap: wrap) {
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-nav-menu .nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .tickets {
+      margin-top: 0.5em;
+    }
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      li {
+        display: block;
+        margin-bottom: 0;
+        padding: 0 0.2em;
+      }
+    }
+  }
+  @media screen and (min-width: $main-nav-mid-breakpoint) {
+    .site-header {
+      padding-bottom: 0.75em;
+    }
+    .branding {
+      padding-bottom: 0.75em;
+    }
+    .main-nav-menu .nav-list {
+      flex-direction: row;
+      .tickets {
+        margin: 0 0.5em;
+      }
+    }
+    .social-icons {
+      margin: 0;
+    }
+  }
+  @media screen and (min-width: $main-nav-wide-breakpoint) {
+    .site-header {
+      padding-bottom: 0.65em;
+    }
+    .branding {
+      padding: 0;
+    }
+    .site-header {
+      flex-direction: row;
+      justify-content: space-between;
+      .branding {
+        align-self: flex-start;
+      }
+      .main-nav-menu .nav-list {
+        margin: 0.75em 0;
+      }
+    }
+    .irl .main-nav-menu {
+      padding: 1.8em 0;
+    }
+  }
+}
+.event {
+  background: $brand-color;
+  color: $inverted-font-color;
+  overflow: hidden;
+  padding: 1.5em 5%;
+}
+.event-detail {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0.75em 5%;
+}
+main,
+footer {
+  background: $secondary-background;
+}
+article,
+.travel,
+.sponsorships {
+  margin: 0 auto;
+  padding: 1.5em 5%;
+  width: 1000px;
+}
+// .irl .home .sponsorships,
+// .conf .home .sponsorships,
+// .gaming .home .sponsorships,
+// .camp .home .sponsorships {
+//   margin-top: -1.5em;
+// }
+@media screen and (min-width: 0) {
+  article,
+  .travel,
+  .sponsorships {
+    width: auto;
+    max-width: 55.55em;
+  }
+}
+ul.team {
+  border: 0;
+  list-style: none;
+  padding: 0;
+  li {
+    text-align: center;
+    margin: 1.25em;
+  }
+  p {
+    margin: 0;
+  }
+  img {
+    max-width: 12em;
+    border-radius: 50%;
+  }
+}
+.speaker-detail {
+  margin-bottom: 3em;
+  min-height: 15em;
+  position: relative;
+  img {
+    border-radius: 50%;
+    display: block;
+    margin: 1.55em auto 0;
+    width: 14em;
+  }
+}
+@media screen and (min-width: 40em) {
+  .speaker-detail {
+    padding-left: 11.11em;
+    img {
+      margin: 0;
+      max-width: 9.44em;
+      position: absolute;
+      top: 0.55em;
+      left: 0;
+      width: auto;
+    }
+  }
+}
+@supports (flex-wrap: wrap) {
+  ul.team {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.sponsorships {
+  margin-top: 1em;
+}
+.sponsors {
+  text-align: center;
+}
+.logo {
+  padding: 2em;
+}
+@supports (flex-wrap: wrap) {
+  .sponsors {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .logo {
+      width: 100%;
+    }
+  }
+}
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+  margin: 0.75em 0;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.address {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.venue {
+  font-size: $base-font-size * 1.25;
+  font-weight: bold;
+}
+footer {
+  padding: 0.25em 5% 1em;
+}
+@media screen and (min-width: 55em) {
+  footer ul {
+    padding: 0;
+  }
+  footer li {
+    display: inline;
+    list-style: none;
+    padding: 0 0.1em;
+  }
+  footer li:before {
+    content: " – ";
+  }
+  footer li:first-child:before {
+    content: none;
+  }
+}
+/* End page structure & styles */
+
+/* -------------------------------------------------------------------------
+ * Forms
+ * ------------------------------------------------------------------------- */
+form {
+  width: 600px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 0) {
+  form {
+    width: auto;
+    max-width: 31.11em;
+  }
+}
+label {
+  font-weight: bold;
+}
+input,
+textarea {
+  border: 0;
+  display: block;
+  font-family: $main-font-stack;
+  font-size: $base-font-size;
+  margin-bottom: 0.5em;
+  outline: 1px solid #333;
+  padding: 0.25em;
+  width: 100%;
+}
+textarea {
+  height: 10em;
+}
+.required {
+  color: $error;
+  font-size: 75%;
+  font-style: italic;
+}
+button {
+  background: $brand-color;
+  border: 0;
+  border-radius: 1.5em;
+  color: $inverted-font-color;
+  font-size: $base-font-size;
+  font-weight: bold;
+  padding: 0.5em 2em;
+}
+
+/* -------------------------------------------------------------------------
+* Camp schedule table
+* ------------------------------------------------------------------------- */
+.tg-wrap {
+  overflow-x: auto;
+  margin-bottom: 2em;
+}
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #333;
+  font-size: 0.85em;
+  margin-bottom: 1em;
+  width: 100%;
+  min-width: 35em;
+  white-space: nowrap;
+}
+.col1 {
+  max-width: 6em;
+}
+.col2,
+.col3 {
+  width: 45%;
+}
+.stream-link {
+  background: $error;
+  border-radius: 1em;
+  color: white !important;
+  margin-left: 1.5em;
+  padding: 0.25em 1.25em;
+}
+.tg a {
+  color: $main-font-color;
+}
+.tg td {
+  font-size: 0.85em;
+  padding: 0.56em 0.27em;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+}
+.tg th {
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 0.56em 0.27em;
+  border: 1px solid black;
+  overflow: hidden;
+  word-break: normal;
+  background: $brand-color;
+  color: white;
+}
+.tg .tg-baqh {
+  text-align: center;
+  vertical-align: top;
+}
+.tg .tg-yw4l {
+  vertical-align: top;
+}
+
+.tg tr:nth-of-type(2n + 1) {
+  background: rgba(7, 104, 0, 0.2);
+}
+/* -------------------------------------------------------------------------
+* #a11yTO.com Branded Events structure & styles
+* ------------------------------------------------------------------------- */
+.branded-events {
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 0.5em 1.5em;
+  }
+  a {
+    background: $meetup-brand-color;
+    border: none;
+    border-radius: 1.5em;
+    color: $inverted-font-color;
+    display: block;
+    font-weight: bold;
+    padding: 0.75em;
+    text-align: center;
+    width: 12em;
+  }
+  a.camp {
+    background: $camp-brand-color;
+  }
+  a.conf {
+    background: $conf-brand-color;
+  }
+  a.irl {
+    background: $irl-brand-color;
+  }
+  a.gaming {
+    background: $gaming-brand-color;
+  }
+}
+@media screen and (min-width: 0) {
+  .branded-events {
+    ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+  }
+}
+@media screen and (min-width: 60em) {
+  .branded-events {
+    a {
+      width: 20em;
+    }
+  }
+  .a11yweek.branded-events {
+    a {
+      width: 14em;
+    }
+  }
+}
+/* End #a11yTO.com Branded Events structure & styles */
+
+/* -------------------------------------------------------------------------
+ * Attention banner structure & styles
+ * ------------------------------------------------------------------------- */
+.attention {
+  background: black;
+  color: white;
+  font-size: 85%;
+  line-height: 1.1;
+  font-weight: bold;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}
+.attention a {
+  color: white;
+  white-space: nowrap;
+}
+@supports (text-underline-offset: 0) {
+  .attention a {
+    text-decoration-color: white;
+  }
+}
+.attention a:focus {
+  text-decoration: none;  
+  outline: 2px solid white;
+}
