@@ -289,13 +289,16 @@ a.current-page {
     padding: 0;
     li {
       list-style: none;
-      margin: 0 0.25em 1em;
+      margin: 0 0.5em 1em;
     }
     .tickets {
       margin: 1.5em 0 1.75em;
     }
     .social {
       margin: 0;
+      li {
+        margin: 0 0.25em 1em;
+      }
     }
   }
 }
