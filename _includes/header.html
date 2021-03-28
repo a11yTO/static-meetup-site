@@ -28,7 +28,7 @@
 </head>
 
 <body{% if page.id %} class="{{ page.id }}" {% endif %}>
-  {% if jekyll.environment == 'stage' %}<p class="attention" role="alert">This is a preview of our site. <a href="https://camp.a11yto.com">View the live content</a>.</p>{% endif %}
+  {% if jekyll.environment == 'stage' %}<p class="attention" role="alert">This is a preview of our site. <a href="https://meetup.a11yto.com">View the live content</a>.</p>{% endif %}
   <header class="site-header">
     <div class="branding">{%- include logo.html -%}</div>
     <nav id="site-navigation" class="main-nav-menu">
@@ -37,7 +37,7 @@
           <a {% if page.id=='home' %}class="current-page" {% endif %} href="/">Home</a>
         </li>
         <li class="tickets">
-          <a href="https://www.meetup.com/a11yTO/events/277164007/" target="_blank">Register</a>
+          <a href="https://www.meetup.com/a11yTO/" target="_blank">Join Us</a>
         </li>
         <li class="social">
           <ul class="social-icons">
