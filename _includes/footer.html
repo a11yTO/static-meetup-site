@@ -1,8 +1,8 @@
 <footer>
   <ul>
     <li>{{ site.time | date: '%Y' }} <a href="https://a11yto.com/">#a11yTO</a></li>
-    <li><a {% if page.id=='organizers' %}class="current-page" {% endif %} href="/organizers">Organizers</a></li>
-    <li><a {% if page.id=='accessibility-statement' %}class="current-page" {% endif %} href="/accessibility-statement">Accessibility Statement</a></li>
-    <li><a {% if page.id=='conduct' %}class="current-page" {% endif %} href="/code-of-conduct">Code of Conduct</a></li>
+    <li><a {% if page.id=='organizers' %}aria-current="page"{% endif %} href="/organizers">Organizers</a></li>
+    <li><a {% if page.id=='accessibility-statement' %}aria-current="page"{% endif %} href="/accessibility-statement">Accessibility Statement</a></li>
+    <li><a {% if page.id=='conduct' %}aria-current="page"{% endif %} href="/code-of-conduct">Code of Conduct</a></li>
   </ul>
 </footer>
