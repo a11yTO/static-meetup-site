@@ -195,6 +195,20 @@ a:focus {
   outline-offset: 3px;
   text-decoration: none;
 }
+.skip-link {
+  background-color: #fff;
+  padding: 0.25em 0.65em;
+  position: absolute;
+  top: 1em;
+  left: -9999em;
+  z-index: 10000;
+  &:focus {
+    left: 1em;
+    outline-offset: 0;
+    text-decoration: underline;
+    text-decoration-color: $brand-color;
+  }
+}
 .main-nav-menu {
   a {
     color: $main-font-color;
