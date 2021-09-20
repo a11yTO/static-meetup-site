@@ -189,9 +189,16 @@ a {
     color: $secondary-color;
   }
 }
-*:focus,
-a:focus {
-  outline: 2px solid black;
+*:focus {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+  text-decoration: none;
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+*:focus-visible {
+  outline: max(2px, 0.175em) solid #000;
   outline-offset: 3px;
   text-decoration: none;
 }
