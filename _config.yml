@@ -26,9 +26,12 @@ twitter_username: a11yTO
 # Build settings
 markdown: kramdown
 # theme: minima
-plugins:
+
+gems:
   - jekyll-sitemap
-  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-sitemap
 
 sass:
   style: compressed
