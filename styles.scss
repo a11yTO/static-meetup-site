@@ -425,7 +425,7 @@ footer {
   background: $secondary-background;
 }
 article,
-.travel,
+.location,
 .sponsorships {
   margin: 0 auto;
   padding: 1.5em 5%;
@@ -434,12 +434,13 @@ article,
 // .irl .home .sponsorships,
 // .conf .home .sponsorships,
 // .gaming .home .sponsorships,
-// .camp .home .sponsorships {
+// .camp .home .sponsorships,
+// .meetup .home .sponsorships {
 //   margin-top: -1.5em;
 // }
 @media screen and (min-width: 0) {
   article,
-  .travel,
+  .location,
   .sponsorships {
     width: auto;
     max-width: 55.55em;
