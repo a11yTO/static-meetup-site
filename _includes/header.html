@@ -38,8 +38,8 @@
           <li>
             <a {% if page.id=='home' %}aria-current="page"{% endif %} href="/">Home</a>
           </li>
-          <li class="tickets">
-            <a href="https://a11y.to/signup" rel="external nofollow">Join Us</a>
+          <li class="join-us">
+            <a class="featured-link" href="https://a11y.to/signup" rel="external nofollow">Join Us</a>
           </li>
           <li class="social">
             <ul class="social-icons">
@@ -71,13 +71,14 @@
       </nav>
     </div>
     {% if page.id == 'home' %}
-    <section class="event">
-      <h1 class="event-title">#{{ site.title }}</h1>
-      <h2 class="event-description">Designing Accessible Data: Inclusive Practices for Effective Visualization</h2>
-      <ul class="event-detail">
+    <section class="upcoming-event">
+      <p class="event-announcement">#a11yTO Presents Our:</p>
+      <h1 class="event-host">March Meetup</h1>
+      <p class="event-title">Designing Accessible Data: Inclusive Practices for Effective Visualization</p>
+      <ul class="event-specifics">
         <li class="event-date">March 5th, 2025, 6:00pm to 8:30pm </li>
         <li class="event-location">League Offices</li>
-        <li class="register"><a href="https://tickets.a11yto.com/e/28/designing-accessible-data-inclusive-practices-for-effective-visualization" rel="external">Register</a></li>
+        <li class="register"><a class="featured-link inverse" href="https://tickets.a11yto.com/e/28/designing-accessible-data-inclusive-practices-for-effective-visualization" rel="external">Register</a></li>
       </ul>
     </section>
     {% endif %}

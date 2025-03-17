@@ -3,18 +3,25 @@ layout: default
 ---
 
 <main id="main-content">
-  <article>
-    {{ content }}
-  </article>
-</main>
+  <article>{{ content }}</article>
 
-<section aria-labelledby="travel-title" class="location">
-        <h2 id="travel-title">Venue</h2>
-        <div class="google-maps">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.0714356728167!2d-79.39074922248236!3d43.64668207110246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34b7d8308ef7%3A0x3febad8ad7baaa0b!2sLeague!5e0!3m2!1sen!2sca!4v1731095867821!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Map to venue" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <ul class="address">
-          <li class="venue">League Office</li>
-          <li>225 King St W Suite #800, Toronto, ON M5V 3M2</li>
-        </ul>
-      </section>
+  <section aria-labelledby="venue-title" class="venue">
+    <h2 id="venue-title">Venue</h2>
+    <div class="google-maps">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.0714356728167!2d-79.39074922248236!3d43.64668207110246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34b7d8308ef7%3A0x3febad8ad7baaa0b!2sLeague!5e0!3m2!1sen!2sca!4v1731095867821!5m2!1sen!2sca"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        title="Map to venue"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <ul class="address">
+      <li class="venue-address">League Office</li>
+      <li>225 King St W Suite #800, Toronto, ON M5V 3M2</li>
+    </ul>
+  </section>
+</main>
