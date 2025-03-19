@@ -154,11 +154,6 @@ h5,
 h6 {
   margin: 0;
 }
-@media (min-width: 35rem) {
-  .page-title {
-    font-size: 3.375rem;
-  }
-}
 .sub-head {
   margin-bottom: 0.25rem;
 }
@@ -213,6 +208,7 @@ article ul {
   margin: 0;
 }
 .team img {
+  height: auto;
   max-width: 14rem;
 }
 @supports (display: grid) {
@@ -220,6 +216,10 @@ article ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
     grid-gap: 1.5rem;
+    margin: 1rem 0 0;
+  }
+  .team li {
+    margin: 0;
   }
   .team img {
     max-width: 11rem;
@@ -347,6 +347,11 @@ h6 {
   font-weight: 700;
   font-style: normal;
   line-height: 1.1;
+}
+@media (min-width: 35rem) {
+  .page-title {
+    font-size: 3.375rem;
+  }
 }
 .sub-head {
   font-size: 1.5rem;
