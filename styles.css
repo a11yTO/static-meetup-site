@@ -46,15 +46,25 @@ body {
 
 .site-header {
   margin-bottom: 1.5rem;
-  padding-top: 1.5rem;
 }
-.masthead,
+.attention {
+  background-color: #000;
+  color: #fff;
+  color: var(--inverse-text-color);
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem 5% 0.75rem;
+  text-align: center;
+  width: 100%;
+}
+.masthead {
+  padding: 1.5rem 5% 0.5rem;
+}
 .colophon {
   margin: 0 auto;
   max-width: 75rem;
 }
-.masthead,
-.upcoming-event,
+.m .upcoming-event,
 .colophon {
   padding: 0 5%;
 }
@@ -424,6 +434,23 @@ a:focus-visible,
 .skip-link:focus {
   left: 0.75rem;
   outline-offset: 0;
+}
+.attention a {
+  color: #fff;
+  color: var(--inverse-text-color);
+  text-decoration-color: rgb(255 255 255);
+  text-decoration-color: var(--inverse-text-color);
+}
+.attention a:focus {
+  outline-color: #fff;
+  outline-color: var(--light-accent);
+}
+.attention a:focus:not(:focus-visible) {
+  outline: none;
+}
+.attention a:focus-visible {
+  outline: max(2px, 0.175rem) solid #fff;
+  outline-color: var(--light-accent);
 }
 .featured-link {
   background-color: rgb(179 10 46);
