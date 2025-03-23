@@ -122,7 +122,7 @@ body {
 }
 .upcoming-event {
   overflow: auto;
-  padding: 1rem 5% 1.5rem;
+  padding: 1rem 5% 0.5rem;
 }
 .event-organizer {
   margin: 0 0 0.5rem;
@@ -139,7 +139,7 @@ body {
 }
 .event-details,
 .event-registration {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
 main,
 .sponsorships {
@@ -291,11 +291,11 @@ body {
   line-height: 1.5;
 }
 .site-header {
-  border-bottom: 3px solid #b30a2e; /* brand color */
+  border-bottom: 3px solid rgb(179 10 46);
   border-color: var(--brand-color);
 }
 .branding-logo {
-  fill: #b30a2e; /* brand color */
+  fill: rgb(179 10 46);
   fill: var(--brand-color);
 }
 .masthead,
@@ -312,11 +312,11 @@ body {
   text-decoration: none;
 }
 .icon {
-  fill: #b30a2e; /* brand color */
+  fill: rgb(179 10 46);
   fill: var(--brand-color);
 }
 .upcoming-event {
-  background-color: #b30a2e; /* brand color */
+  background-color: rgb(179 10 46);
   background-color: var(--brand-color);
   color: #fff;
   color: var(--inverse-text-color);
@@ -340,7 +340,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #b30a2e; /* brand color */
+  color: rgb(179 10 46);
   color: var(--brand-color);
   font-family: "League Spartan", sans-serif;
   font-family: var(--heading-font-stack);
@@ -350,11 +350,6 @@ h6 {
   font-style: normal;
   line-height: 1.1;
   text-wrap: balance;
-}
-@media (min-width: 35rem) {
-  .page-title {
-    font-size: 3.375rem;
-  }
 }
 @media (min-width: 35rem) {
   .page-title {
@@ -377,7 +372,7 @@ strong {
   border-radius: 50%;
 }
 .site-footer {
-  border-top: 1px solid #b30a2e; /* brand color */
+  border-top: 1px solid rgb(179 10 46);
   border-color: var(--brand-color);
 }
 
@@ -387,7 +382,7 @@ strong {
 a {
   color: #025b9f;
   color: var(--link-color);
-  text-decoration-color: #b30a2e; /* brand color */
+  text-decoration-color: rgb(179 10 46);
   text-decoration-color: var(--brand-color);
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.15rem;
@@ -431,7 +426,7 @@ a:focus-visible,
   outline-offset: 0;
 }
 .featured-link {
-  background-color: #b30a2e; /* brand color */
+  background-color: rgb(179 10 46);
   background-color: var(--brand-color);
   border-radius: 1.38em;
   color: #222;
@@ -451,7 +446,7 @@ a:focus-visible,
 .featured-link.inverse {
   background-color: #fff;
   background-color: var(--background-color);
-  color: #b30a2e; /* brand color */
+  color: rgb(179 10 46);
   color: var(--brand-color);
 }
 .featured-link.meetup,
