@@ -1,23 +1,29 @@
+
 <head>
   <meta charset="utf-8">
   {% if jekyll.environment == 'stage' %}
   <meta name="robots" content="noindex">{% endif %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="/favicon.png">
+
   <title>{% if page.title %}{{ page.title }} &ndash; #{{ site.title }}{% else %}#{{ site.title }} &ndash; {{ site.description }}{% endif %}</title>
+
   <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700..900&family=Open+Sans:ital,wght@0,500..700;1,500..700&display=swap" rel="stylesheet">
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="#{{ site.title }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:locale" content="en_CA">
-  <meta property="og:url" content="{{ site.url }}">
-  <meta property="og:image" content="https://meetup.a11yto.com/ogp.jpg">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/ogp.jpg">
   <meta property="og:image:type" content="image/jpg">
   <meta property="og:image:alt" content="The #a11yTO Meetup logo.">
+
 </head>
 
 <body{% if page.id %} class="{{ page.id }}" {% endif %}>

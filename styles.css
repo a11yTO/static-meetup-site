@@ -157,6 +157,9 @@ main,
   margin: 0 auto 1.5rem;
   max-width: 44rem;
 }
+.past-event main {
+  margin-bottom: 3rem;
+}
 h1,
 h2,
 h3,
