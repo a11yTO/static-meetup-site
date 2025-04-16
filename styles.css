@@ -231,6 +231,9 @@ section p {
   height: auto;
   max-width: 14rem;
 }
+img.watching {
+  transform: rotate(90deg);
+}
 @supports (display: grid) {
   .team {
     display: grid;
@@ -243,6 +246,11 @@ section p {
   }
   .team img {
     max-width: 11rem;
+  }
+  @media (min-width: 44.2rem) {
+    img.watching {
+      transform: rotate(44deg);
+    }
   }
 }
 .colophon {
@@ -389,6 +397,12 @@ strong {
 }
 .team img {
   border-radius: 50%;
+}
+.sponsors {
+  text-align: center;
+}
+.logo {
+  margin: 1rem;
 }
 .site-footer {
   border-top: 1px solid #b30a2e; /* hex brand color */
