@@ -42,6 +42,11 @@ html,
 body {
   margin: 0;
 }
+p,
+ol,
+ul {
+  margin: 0 0 1.5rem;
+}
 
 /* -------------------------------------------------------------------------
  * Layout
@@ -60,21 +65,10 @@ body {
     grid-column: 2/3;
     grid-row: 2/3;
   }
-  .venue {
-    grid-column: 2/3;
-    grid-row: 3/4;
-  }
-  .sponsorships {
-    grid-column: 2/3;
-    grid-row: 4/5;
-  }
   .site-footer {
     grid-column: 1/4;
-    grid-row: 5/6;
+    grid-row: 3/4;
   }
-}
-.site-header {
-  margin-bottom: 1.5rem;
 }
 .attention {
   background-color: #000;
@@ -120,6 +114,7 @@ body {
 .social-icons,
 .social-icons a {
   padding: 0;
+  margin: 0;
 }
 .social-icons a {
   display: inline-block;
@@ -172,8 +167,8 @@ body {
   margin: 0;
 }
 .event-description {
-  margin: 0 auto;
-  max-width: 50ch;
+  margin: 0 0 1rem;
+  text-wrap: balance;
 }
 .event-specifics {
   padding: 0;
@@ -182,21 +177,12 @@ body {
 .event-registration {
   margin: 1.5rem 0;
 }
-main,
-.sponsorships {
+main {
   padding: 0 5%;
-  margin: 0 auto 3rem;
+  margin: 1.5rem auto;
   max-width: 44rem;
 }
-@supports (display: grid) {
- main,
- .sponsorships {
-   margin: 0;
-   margin-bottom: 1.5rem;
-   max-width: auto;
- }
-}
-.past-event main {
+.past-event {
   margin-bottom: 3rem;
 }
 h1,
@@ -215,12 +201,6 @@ h3 + .sub-head,
 h4 + .sub-head {
   margin-top: 0.25rem;
 }
-article p,
-article ol,
-article ul,
-section p {
-  margin: 0 0 1.5rem;
-}
 .branded-events {
   margin-bottom: 1.5rem;
 }
@@ -229,7 +209,7 @@ section p {
 }
 .address {
   list-style: none;
-  margin: 0;
+  margin: 0 0 1.5rem;
   padding: 0;
 }
 .venue-address {
@@ -273,13 +253,9 @@ img.watching {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
     grid-gap: 1.5rem;
-    margin: 1rem 0 0;
-  }
-  .team li {
-    margin: 0;
   }
   .team img {
-    max-width: 11rem;
+    max-width: 10rem;
   }
   @media (min-width: 44.2rem) {
     img.watching {
@@ -329,7 +305,7 @@ ul.schedule {
   margin: 1.5rem;
 }
 .colophon {
-  padding: 0.5rem 5% 3rem;
+  padding: 1.5rem 5%;
 }
 .colophon ul {
   padding: 0;
