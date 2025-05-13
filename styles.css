@@ -44,8 +44,17 @@ body {
 }
 p,
 ol,
-ul {
+ul,
+iframe {
   margin: 0 0 1.5rem;
+}
+img,
+iframe {
+  height: auto; 
+  width: 100%;
+}
+strong {
+  font-weight: 600;
 }
 
 /* -------------------------------------------------------------------------
@@ -303,6 +312,7 @@ ul.schedule {
 }
 .logo {
   margin: 1.5rem;
+  width: auto;
 }
 .colophon {
   padding: 1.5rem 5%;
@@ -319,14 +329,9 @@ ul.schedule {
 }
 
 /* -------------------------------------------------------------------------
- * Typography, Colours & Styles
+ * Typography & Styles
  * ------------------------------------------------------------------------- */
-
 body {
-  background: #fff;
-  background: var(--background-color);
-  color: #222222;
-  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
   font-family: var(--font-stack);
   font-optical-sizing: auto;
@@ -337,14 +342,6 @@ body {
   font-variation-settings: "wdth" 100;
   line-height: 1.5;
 }
-.site-header {
-  border-bottom: 3px solid #b30a2e; /* hex brand color */
-  border-color: var(--brand-color);
-}
-.branding-logo {
-  fill: #b30a2e; /* hex brand color */
-  fill: var(--brand-color);
-}
 .masthead,
 .upcoming-event,
 .colophon {
@@ -354,24 +351,12 @@ body {
   list-style: none;
 }
 .main-nav-menu a {
-  color: #222222;
-  color: var(--text-color);
   text-decoration: none;
 }
-.icon {
-  fill: #b30a2e; /* hex brand color */
-  fill: var(--brand-color);
-}
 .upcoming-event {
-  background-color: #b30a2e; /* hex brand color */
-  background-color: var(--brand-color);
-  color: #fff;
-  color: var(--inverse-text-color);
   font-weight: bold;
 }
 .event-title {
-  color: #fff;
-  color: var(--inverse-text-color);
   font-size: 3.375rem;
 }
 .event-description {
@@ -387,8 +372,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: #b30a2e; /* hex brand color */
-  color: var(--brand-color);
   font-family: "League Spartan", sans-serif;
   font-family: var(--heading-font-stack);
   font-size: 2.25rem;
@@ -427,46 +410,66 @@ strong {
 .sponsors {
   text-align: center;
 }
+
+/* -------------------------------------------------------------------------
+ * Colours
+ * ------------------------------------------------------------------------- */
+body {
+  background: #fff;
+  background: var(--background-color);
+  color: #222222;
+  color: var(--text-color);
+}
+.site-header {
+  border-bottom: 3px solid #b30a2e; /* hex brand color */
+  border-color: var(--brand-color);
+}
+.branding-logo {
+  fill: #b30a2e; /* hex brand color */
+  fill: var(--brand-color);
+}
+.main-nav-menu a {
+  color: #222222;
+  color: var(--text-color);
+}
+.icon {
+  fill: #b30a2e; /* hex brand color */
+  fill: var(--brand-color);
+}
+.upcoming-event {
+  background-color: #b30a2e; /* hex brand color */
+  background-color: var(--brand-color);
+  color: #fff;
+  color: var(--inverse-text-color);
+}
+.event-title {
+  color: #fff;
+  color: var(--inverse-text-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #b30a2e; /* hex brand color */
+  color: var(--brand-color);
+}
 .site-footer {
   border-top: 1px solid #b30a2e; /* hex brand color */
   border-color: var(--brand-color);
 }
 
 /* -------------------------------------------------------------------------
- * Link styles
+ * Link structure and colours
  * ------------------------------------------------------------------------- */
 a {
   color: #025b9f;
   color: var(--link-color);
-  text-decoration-color: rgb(179 10 46);
+  text-decoration-color: #b30a2e; /* hex brand color */
   text-decoration-color: var(--brand-color);
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.15rem;
-}
-a:focus,
-.inverse:focus {
-  outline: 2px solid #222;
-  outline-color: var(--dark-accent);
-  outline-offset: 3px;
-  text-decoration: none;
-  z-index: 1000;
-}
-.inverse:focus {
-  outline-color: #fff;
-  outline-color: var(--light-accent);
-}
-a:focus:not(:focus-visible),
-.inverse:focus:not(:focus-visible) {
-  outline: none;
-}
-a:focus-visible,
-.inverse:focus-visible {
-  outline: max(2px, 0.175rem) solid #222;
-  outline-color: var(--dark-accent);
-}
-.inverse:focus-visible {
-  outline-color: #fff;
-  outline-color: var(--light-accent);
 }
 .skip-link {
   background-color: #fff;
@@ -481,54 +484,48 @@ a:focus-visible,
   left: 0.75rem;
   outline-offset: 0;
 }
-.attention a {
+a[aria-current] {
+  color: #025b9f;
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--brand-color);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2rem;
+}
+.colophon a[aria-current] {
+  color: #222222;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.inverse {
   color: #fff;
   color: var(--inverse-text-color);
-  text-decoration-color: rgb(255 255 255);
-  text-decoration-color: var(--inverse-text-color);
-}
-.attention a:focus {
-  outline-color: #fff;
-  outline-color: var(--light-accent);
-}
-.attention a:focus:not(:focus-visible) {
-  outline: none;
-}
-.attention a:focus-visible {
-  outline: max(2px, 0.175rem) solid #fff;
-  outline-color: var(--light-accent);
+  text-decoration-color: #fff;
+  text-decoration-color: var(--light-accent);
 }
 .featured-link {
   background-color: #b30a2e; /* hex brand color */
   background-color: var(--brand-color);
   border-radius: 1.38em;
-  color: #222;
-  color: var(--inverse-text-color);
-  font-weight: 700;
+  color: #ffff;
+  color: var(--light-accent);
+  font-weight: 600;
   font-size: 1.5rem;
   padding: 0.5rem 3rem;
   text-decoration: none;
   white-space: nowrap;
 }
-.join-us .featured-link,
-.get-tickets .featured-link,
-.buy-tickets .featured-link {
-  font-size: 1.125rem;
-  padding: 0.5rem 1.5rem;
-}
 .featured-link.inverse {
   background-color: #fff;
-  background-color: var(--background-color);
+  background-color: var(--light-accent);
   color: #b30a2e; /* hex brand color */
   color: var(--brand-color);
 }
 .featured-link.meetup,
 .featured-link.gaming,
 .featured-link.camp,
-.featured-link.conf,
-.join-us .featured-link,
-.get-tickets .featured-link,
-.buy-tickets .featured-link {
+.featured-link.conf {
   color: #fff;
   color: var(--inverse-text-color);
 }
@@ -548,20 +545,36 @@ a:focus-visible,
   background-color: #025b9f;
   background-color: var(--conf-brand-color);
 }
-.main-nav-menu a[aria-current] {
-  color: rgb(2 91 159);
-  color: var(--link-color);
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--brand-color);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.2rem;
+.join-us .featured-link,
+.get-tickets .featured-link,
+.buy-tickets .featured-link {
+  color: #fff;
+  color: var(--light-accent);
+  font-size: 1.125rem;
+  padding: 0.5rem 1.5rem;
 }
-.colophon a[aria-current] {
-  color: #222222;
-  color: var(--text-color);
-  font-weight: 700;
+*:focus {
+  outline: 2px solid #222;
+  outline-color: var(--dark-accent);
+  outline-offset: 0.2rem;
   text-decoration: none;
+  z-index: 1000;
+}
+.inverse:focus {
+  outline-color: #fff;
+  outline-color: var(--light-accent);
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+*:focus-visible {
+  outline: 0.175rem solid #222;
+  outline-color: var(--dark-accent);
+}
+.inverse:focus-visible {
+  outline-color: #fff;
+  outline-color: var(--light-accent);
+  outline-offset: 0.2rem;
 }
 
 /* -------------------------------------------------------------------------
