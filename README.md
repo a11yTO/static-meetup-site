@@ -28,7 +28,7 @@ Hopefully the biggest hurdle one would need to clear in order to perform a chang
 
 Aside from content that can be found in individual page files (`organizers.html`, as another example), here are some areas of our site that frequently require changes or updates, and where in this repository one would find them:
 
-- **Styles** are written in vanilla `CSS` and are at the root of the project, simply named `styles.css`;
+- **Styles** are written in vanilla `CSS` and are at the root of the #a11yTO project, to keep all `css` for all of our sites in one place, and it's simply named [styles.css](https://github.com/a11yTO/A11yTO-Main/blob/main/styles.css);
 - **Main Navigation** items are in the `_includes` directory and in the file `header.html`;
 - **Sponsors** are in the `_includes` directory and in the file `sponsors.html`;
 - **Footer Content** is in the `_includes` directory and in the file `footer.html`
