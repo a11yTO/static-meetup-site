@@ -27,9 +27,9 @@
 </head>
 
 <body{% if page.id %} class="{{ page.id }}" {% endif %}>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  {% if jekyll.environment == 'stage' %}<p class="attention" role="alert">This is a preview of our site. <a href="https://meetup.a11yto.com">View the live content</a>.</p>{% endif %}
   <header class="site-header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    {% if jekyll.environment == 'stage' %}<p class="attention" role="alert">This is a preview of our site. <a href="https://meetup.a11yto.com">View the live content</a>.</p>{% endif %}
     <div class="masthead">
       <div class="branding">{%- include logo.html -%}</div>
       <nav id="site-navigation" class="main-nav-menu">
